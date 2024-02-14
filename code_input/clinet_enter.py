@@ -2,7 +2,7 @@ import socket
 def start(code, lang):
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     #Подключаемся :3
-    client_socket.connect(('127.0.0.1', 11221))
+    client_socket.connect(('127.0.0.1', 8172))
     # Отправляем код, надо еще чтение допилить, но это потом)
     mess = f"{lang}-{code}"
     client_socket.sendall(mess.encode('utf-8'))
